@@ -1,5 +1,5 @@
 //need with 
-//import { Octokit } from "https://esm.sh/@octokit/rest";
+import { Octokit } from "https://esm.sh/@octokit/rest";
 
 function base64Decode(text, charset) {
   charset=charset||'utf-8';
@@ -18,7 +18,7 @@ function base64Encode(...parts) {
   });
 }  
 
-export function Gitapi(auth , owner, repo, branch, path){
+function Gitapi(auth , owner, repo, branch, path){
 
   let o={}
   o.env={}
