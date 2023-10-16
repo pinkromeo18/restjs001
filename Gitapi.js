@@ -1,4 +1,5 @@
-import { Octokit } from "https://esm.sh/@octokit/rest";
+//need with 
+//import { Octokit } from "https://esm.sh/@octokit/rest";
 
 function base64Decode(text, charset) {
   charset=charset||'utf-8';
@@ -17,7 +18,7 @@ function base64Encode(...parts) {
   });
 }  
 
-function Gitapi(auth , owner, repo, branch, path){
+export function Gitapi(auth , owner, repo, branch, path){
 
   let o={}
   o.env={}
@@ -90,28 +91,3 @@ function Gitapi(auth , owner, repo, branch, path){
   ;
   return Object.assign({},o)
 }
-
-/*
-//var Buffer = buffer.Buffer
-const env={
-  auth :"ghp_IHasPyQII"+"AkC5ehMgILVFfcC"+"nx81JC46YkmX",
-  owner:"pinkromeo18",
-  repo:"restjs001",
-  branch:null
-}
-
-var isup=document.getElementById("isup")
-var {auth,owner,repo,branch}=env
-var path = "test.txt"
-var myapi = Gitapi(auth,owner,repo,branch,path)
-
-isup.onclick=async ()=>{
-  //console.log(myapi.env)
-  let flg=await myapi.isup()
-  isup.textContent = ""+flg
-  let d=await myapi.get()
-  console.log(d)
-  myapi.up("aiue3333wo")
-}
-
-*/
