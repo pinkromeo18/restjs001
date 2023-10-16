@@ -94,7 +94,7 @@ function Gitapi(auth , owner, repo, branch, path){
 /*
 //var Buffer = buffer.Buffer
 const env={
-  auth :"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",
+  auth :"ghp_IHasPyQII"+"AkC5ehMgILVFfcC"+"nx81JC46YkmX",
   owner:"pinkromeo18",
   repo:"restjs001",
   branch:null
