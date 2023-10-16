@@ -17,7 +17,7 @@ function base64Encode(...parts) {
   });
 }  
 
-export function Gitapi(auth , owner, repo, branch, path){
+function Gitapi(auth , owner, repo, branch, path){
 
   let o={}
   o.env={}
