@@ -19,6 +19,7 @@ export function Polling(fn,msec){
 
 
 /*usage
+import {Polling} from "https://pinkromeo18.github.io/restjs001/Polling.js"
 var fn={};
 fn.g=(d)=>document.getElementById(d)
 //textContent
@@ -28,19 +29,19 @@ data.textContent ="1"
 data2.textContent ="1"
 ///
 var p1=Polling(()=>{
-data.textContent = parseInt(data.textContent, 10) + 1
+  data.textContent = parseInt(data.textContent, 10) + 1
 },1000)
 
 var p2=Polling(()=>{
-data2.textContent = parseInt(data2.textContent, 10) + 3
+  data2.textContent = parseInt(data2.textContent, 10) + 3
 },3000)
 
 fn.g("a").onclick=()=>{
-p1.start()
-p2.start()
+  p1.start()
+  p2.start()
 }
 fn.g("b").onclick=()=>{
-p1.stop()
-p2.stop()
+  p1.stop()
+  p2.stop()
 }
 */
