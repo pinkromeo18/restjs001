@@ -1,12 +1,13 @@
 export function Polling(fn,msec){
   let o={}
   o.msec=msec||10*1000
+  o.starttime=Date.now()
   o.fn=fn
   o.id=undefined
   o.start=()=>{
     clearTimeout(o.id)    
     o.id=setTimeout(()=>{
-      o.fn()
+      o.fn(o.starttime)
       o.start()
     },o.msec)
   }
@@ -28,11 +29,11 @@ var data2= fn.g("data2")
 data.textContent ="1"
 data2.textContent ="1"
 ///
-var p1=Polling(()=>{
+var p1=Polling((starttime)=>{
   data.textContent = parseInt(data.textContent, 10) + 1
 },1000)
 
-var p2=Polling(()=>{
+var p2=Polling((starttime)=>{
   data2.textContent = parseInt(data2.textContent, 10) + 3
 },3000)
 
